@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: vermouth_production
-  username: vermouth
-  password: <%= ENV['VERMOUTH_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
