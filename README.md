@@ -27,7 +27,7 @@
 ### Association
 
 - belongs_to :user
-- has_many :coordinates
+- has_many :coordinates, through: : item_coordinates
 
 
 ## coordinatesテーブル
@@ -44,7 +44,7 @@
 ### Association
 
 - belongs_to :user
-- has_many :items
+- has_many :items, through: : item_coordinates
 
 
 ## item_coordinatesテーブル
