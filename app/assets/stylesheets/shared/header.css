@@ -42,7 +42,7 @@ body {
   justify-content: center;
 }
 
-.bubble,
+.chat,
 .bell,
 .search {
   width: 100%;
@@ -51,7 +51,7 @@ body {
   background-color: currentColor;
 }
 
-.bubble::before {
+.chat::before {
   content: "";
   width: 8px;
   height: 8px;
@@ -62,7 +62,7 @@ body {
   transform: translateY(-50%);
 }
 
-.bubble::after {
+.chat::after {
   content: "";
   width: 6px;
   height: 12px;

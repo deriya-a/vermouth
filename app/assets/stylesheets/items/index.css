@@ -5,9 +5,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .image-grid {
@@ -18,9 +18,9 @@ body {
 
 .image-box {
   border: 2px solid #BB0011;
-  padding: 10px;
+  padding: 0px;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 img {
