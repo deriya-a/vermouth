@@ -1,39 +1,35 @@
-<div class="header">
-    <a href="#" onclick="history.back()">&larr;</a>
-    <span class="header-title">アイテム登録</span>
-    <span></span> <!-- To keep space-between symmetry -->
-</div>
+<div class="item-registration-container">
+  <header class="header">
+    <a href="#" class="back-arrow">←</a>
+    <h2>アイテム登録</h2>
+  </header>
+  
+  <hr class="divider">
 
-<div class="horizontal-line"></div>
+  <%= form_with model: @item, local: true, html: { class: 'item-form' } do |f| %>
+    <div class="image-container">
+      <%#= image_tag(@item.image_url || "default-image-url", alt: "画像", class: "item-image") %>
+      <%= f.file_field :image, accept: "image/*", capture: "camera" %>
+    </div>
 
-<div class="image-box">
-    <!-- If the image exists, display the image. Otherwise, display the placeholder. -->
-    <%# if @item.image.present? %>
-        <%#= image_tag @item.image, alt: "Item Image" %>
-    <%# else %>
-       <%# <span class="image-placeholder">画像</span> %>
-    <%# end %>
-    <%#<input type="file" accept="image/*" capture="camera" style="position: absolute; opacity: 0; width: 100%; height: 100%;">%>%
-</div>
+    <hr class="divider">
 
-<div class="horizontal-line"></div>
+    <div class="select-field">
+      <%= f.select :category, options_for_select(Category.data.map { |c| [c[:name], c[:id]] }), prompt: "種類" %>
+    </div>
 
-<div class="select-field">
-    <%= select_tag "item[category]", options_for_select(YOUR_ACTIVE_HASH_DATA), prompt: "種類" %>
-</div>
+    <div class="select-field">
+      <%= f.select :color, options_for_select(Color.data.map { |c| [c[:name], c[:id]] }), prompt: "色" %>
+    </div>
 
-<div class="select-field">
-    <%= select_tag "item[color]", options_for_select(YOUR_ACTIVE_HASH_DATA), prompt: "色" %>
-</div>
+    <div class="select-field">
+      <%= f.select :type, options_for_select([['袷', 1], ['単', 2]]), prompt: "袷/単" %>
+    </div>
 
-<div class="select-field">
-    <%= select_tag "item[awase_hitoe]", options_for_select([["袷", "awase"], ["単", "hitoe"]]), prompt: "袷/単" %>
-</div>
+    <div class="textarea-field">
+      <%= f.text_area :memo, maxlength: 300, placeholder: "メモ (最大300字)" %>
+    </div>
 
-<div class="textarea-field">
-    <%= text_area_tag "item[memo]", nil, maxlength: 300, placeholder: "メモ (300字まで)" %>
-</div>
-
-<div class="button-field">
-    <%= button_tag "登録" %>
+    <%= f.submit "登録", class: "submit-button" %>
+  <% end %>
 </div>

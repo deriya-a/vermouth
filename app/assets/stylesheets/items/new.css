@@ -1,58 +1,60 @@
-body {
+.item-registration-container {
   background-color: #fef4f4;
-  font-family: Arial, sans-serif;
   color: #333631;
-}
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #BB0011;
-}
+  .header {
+    display: flex;
+    align-items: center;
 
-.header a {
-  color: #F7E3C0;
-  font-size: 24px;
-}
+    .back-arrow {
+      color: #BB0011;
+      margin-right: 10px;
+    }
+    
+    h2 {
+      flex: 1;
+      text-align: center;
+    }
+  }
 
-.header-title {
-  font-size: 18px;
-  color: #F7E3C0;
-}
+  .divider {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #BB0011;
+    margin: 10px 0;
+  }
 
-.horizontal-line {
-  width: 100%;
-  border: none;
-  height: 1px;
-  background-color: #BB0011;
-  margin: 10px 0;
-}
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-.image-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #F7E3C0;
-  height: 200px; /* Or any desired height for the square */
-  position: relative;
-}
+    .item-image {
+      width: 100px;
+      height: 100px;
+      background-color: #F7E3C0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
-.image-placeholder {
-  text-align: center;
-}
+  .select-field, .textarea-field {
+    margin-bottom: 10px;
 
-.select-field, .textarea-field, .button-field {
-  margin: 10px 0;
-}
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #BB0011;
+      background-color: #F7E3C0;
+    }
+  }
 
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #BB0011;
-  color: #F7E3C0;
-  border: none;
-  cursor: pointer;
+  .submit-button {
+    width: 100%;
+    background-color: #BB0011;
+    border: none;
+    padding: 10px 0;
+    color: white;
+  }
 }
