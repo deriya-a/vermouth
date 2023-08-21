@@ -18,4 +18,8 @@ class Color < ActiveHash::Base
     { id: 16, name: "灰色" },
     { id: 17, name: "その他" }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
+
   end
