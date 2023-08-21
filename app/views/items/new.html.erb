@@ -8,12 +8,12 @@
 
 <div class="image-box">
     <!-- If the image exists, display the image. Otherwise, display the placeholder. -->
-    <% if @item.image.present? %>
-        <%= image_tag @item.image, alt: "Item Image" %>
-    <% else %>
-        <span class="image-placeholder">画像</span>
-    <% end %>
-    <input type="file" accept="image/*" capture="camera" style="position: absolute; opacity: 0; width: 100%; height: 100%;">
+    <%# if @item.image.present? %>
+        <%#= image_tag @item.image, alt: "Item Image" %>
+    <%# else %>
+       <%# <span class="image-placeholder">画像</span> %>
+    <%# end %>
+    <%#<input type="file" accept="image/*" capture="camera" style="position: absolute; opacity: 0; width: 100%; height: 100%;">%>%
 </div>
 
 <div class="horizontal-line"></div>

@@ -66,3 +66,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mail', '2.7.1'
 
 gem 'devise'
+gem 'active_hash'
