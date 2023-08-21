@@ -1,0 +1,39 @@
+<div class="header">
+    <a href="#" onclick="history.back()">&larr;</a>
+    <span class="header-title">アイテム登録</span>
+    <span></span> <!-- To keep space-between symmetry -->
+</div>
+
+<div class="horizontal-line"></div>
+
+<div class="image-box">
+    <!-- If the image exists, display the image. Otherwise, display the placeholder. -->
+    <% if @item.image.present? %>
+        <%= image_tag @item.image, alt: "Item Image" %>
+    <% else %>
+        <span class="image-placeholder">画像</span>
+    <% end %>
+    <input type="file" accept="image/*" capture="camera" style="position: absolute; opacity: 0; width: 100%; height: 100%;">
+</div>
+
+<div class="horizontal-line"></div>
+
+<div class="select-field">
+    <%= select_tag "item[category]", options_for_select(YOUR_ACTIVE_HASH_DATA), prompt: "種類" %>
+</div>
+
+<div class="select-field">
+    <%= select_tag "item[color]", options_for_select(YOUR_ACTIVE_HASH_DATA), prompt: "色" %>
+</div>
+
+<div class="select-field">
+    <%= select_tag "item[awase_hitoe]", options_for_select([["袷", "awase"], ["単", "hitoe"]]), prompt: "袷/単" %>
+</div>
+
+<div class="textarea-field">
+    <%= text_area_tag "item[memo]", nil, maxlength: 300, placeholder: "メモ (300字まで)" %>
+</div>
+
+<div class="button-field">
+    <%= button_tag "登録" %>
+</div>

@@ -1,0 +1,58 @@
+body {
+  background-color: #fef4f4;
+  font-family: Arial, sans-serif;
+  color: #333631;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #BB0011;
+}
+
+.header a {
+  color: #F7E3C0;
+  font-size: 24px;
+}
+
+.header-title {
+  font-size: 18px;
+  color: #F7E3C0;
+}
+
+.horizontal-line {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #BB0011;
+  margin: 10px 0;
+}
+
+.image-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F7E3C0;
+  height: 200px; /* Or any desired height for the square */
+  position: relative;
+}
+
+.image-placeholder {
+  text-align: center;
+}
+
+.select-field, .textarea-field, .button-field {
+  margin: 10px 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #BB0011;
+  color: #F7E3C0;
+  border: none;
+  cursor: pointer;
+}

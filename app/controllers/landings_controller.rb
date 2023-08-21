@@ -1,2 +1,2 @@
-class LandingsController < ApplicationController
+class LandingsController < ApplicationController  
 end
