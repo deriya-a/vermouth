@@ -3,16 +3,16 @@
   <div class="container">
     <div class="image-grid">
       <div class="image-box">
-       <%= image_tag "kimono1.jpg", class:"image-box" %>
+       <%= image_tag "kimono1.jpg", class:"image-box" if item.image.attached? %>
       </div>
       <div class="image-box">
-        <%= image_tag "kimono2.jpg", class:"image-box" %>
+        <%= image_tag "kimono2.jpg", class:"image-box" if item.image.attached? %>
       </div>
       <div class="image-box">
-         <%= image_tag "kimono3.jpg", class:"image-box" %>
+         <%= image_tag "kimono3.jpg", class:"image-box" if item.image.attached? %>
       </div>
       <div class="image-box">
-         <%= image_tag "kimono4.jpg", class:"image-box" %>
+         <%= image_tag "kimono4.jpg", class:"image-box" if item.image.attached? %>
       </div>
     </div>
   </div>
